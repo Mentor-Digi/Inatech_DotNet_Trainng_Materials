@@ -1,0 +1,46 @@
+﻿@model MVC1.Models.Customer
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MultiButton</title>
+</head>
+<body>
+    <div>
+        @*@using (Html.BeginForm("EvalButton", "Customer", FormMethod.Post))
+        {
+            <div>
+                <h3>Client Side Validation</h3>
+            </div>
+            <div>
+                Customer Name: @Html.TextBoxFor(v => v.CustomerName)  <br />
+                @Html.ValidationMessageFor(x => x.CustomerName)<br />
+                Customer Code: @Html.TextBoxFor(v => v.CustomerCode)  <br />
+                @Html.ValidationMessageFor(x => x.CustomerCode)<br />
+
+                @Html.EditorForModel()
+
+                <input type="submit" name="Save" value="Save" />
+                <input type="submit" name="Delete" value="Delete" />
+            </div>
+
+        }*@
+
+        @using (Html.BeginForm())
+        {
+            @Html.EditorForModel()
+            <input type="submit" name="Save" value="Save" formaction="SaveFrm" formmethod="post" />
+            <input type="submit" name="Delete" value="Delete"  formaction="DeleteFrm" formmethod="post"/>
+        }
+            <br />
+
+        }
+    </div>
+</body>
+</html>

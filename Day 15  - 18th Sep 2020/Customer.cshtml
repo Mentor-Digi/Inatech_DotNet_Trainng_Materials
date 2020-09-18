@@ -1,0 +1,27 @@
+﻿@model MVC1.Models.Customer
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Customer</title>
+</head>
+<body>
+    <div> 
+        <h4>Customer Data</h4>
+    </div>
+    <div>
+        Customer Code: @Model.CustomerCode<br />
+        Customer Name: @Model.CustomerName
+    </div>
+    <div>
+        @ViewBag.Msg
+        <br />
+        @Html.DisplayForModel()
+    </div>
+</body>
+</html>
