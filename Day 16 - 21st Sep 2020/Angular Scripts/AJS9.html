@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>AJS Bind</title>
+    <script src="Scripts/angular.js"></script>
+</head>
+<body ng-app>
+    <div>
+        25+25 = <span ng-bind="25+25"></span>
+        <input type="text" ng-model="n1" />
+        <input type="text" ng-model="n2" />
+        <!--<span ng-bind="n1+n2"></span>-->
+        {{n1--n2}}<br />
+
+        <input type="number" ng-model="num1" />
+        <input type="number" ng-model="num2" />
+        <div>
+            {{num1- num2}}
+        </div>
+        
+    </div>
+</body>
+</html>
